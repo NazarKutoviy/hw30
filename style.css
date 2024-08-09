@@ -1,0 +1,54 @@
+.container {
+  width: 500px;
+  height: 500px;
+}
+.bg-box {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(0, 254, 186);
+  position: relative;
+
+  animation-name: changeBgColor, animateTransform;
+  animation-duration: 1000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: alternate;
+}
+@keyframes changeBgColor {
+  0% {
+    background-color: red;
+  }
+
+  25% {
+    background-color: blue;
+  }
+
+  50% {
+    background-color: green;
+  }
+  75% {
+    background-color: orange;
+  }
+  100% {
+    background-color: yellow;
+  }
+}
+
+@keyframes animateTransform {
+  0% {
+    transform: translate(0);
+  }
+
+  25% {
+    transform: translate(0, calc(30vw - 110px));
+  }
+  50% {
+    transform: translate(calc(30vw - 110px), calc(30vw - 110px));
+  }
+  75% {
+    transform: translate(calc(30vw - 110px), 0);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
